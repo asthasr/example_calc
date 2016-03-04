@@ -20,10 +20,6 @@ module Calculator
                   end
     end
 
-    def last
-      @stack.last
-    end
-
     def view
       @stack.dup
     end
