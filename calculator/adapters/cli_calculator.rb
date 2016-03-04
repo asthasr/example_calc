@@ -2,9 +2,9 @@ require_relative "../stack"
 require_relative "../errors/error"
 
 module Calculator
-  module Port
+  module Adapter
     class CliCalculator
-      include Port
+      include Adapter
 
       def initialize
         @stack = Stack.new

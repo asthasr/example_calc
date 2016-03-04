@@ -3,9 +3,9 @@ require_relative "../operators/operator"
 Dir[File.dirname(__FILE__) + "/*.rb"].each { |file| require file }
 
 module Calculator
-  module Port
+  module Adapter
     def parse_token(str)
-      if str =~ /^-?\d+(\.\d+)?$/
+      if str =~ /^-?\d+(\.\d+)?$/    
         str.to_f
       else
         Operator.from_string(str)

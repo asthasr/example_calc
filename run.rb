@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative "./calculator/ports/port"
+require_relative "./calculator/adapters/adapter"
 
-Calculator::Port::CliCalculator.new.run
+Calculator::Adapter::CliCalculator.new.run
