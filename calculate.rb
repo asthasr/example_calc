@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 require_relative "./calculator/adapters/adapter"
 
-Calculator::Adapter::InteractiveCalculator.new.run
+puts Calculator::Adapter::StringCalculator.new.process(ARGV[0])

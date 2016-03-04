@@ -3,7 +3,7 @@ require_relative "../errors/error"
 
 module Calculator
   module Adapter
-    class CliCalculator
+    class InteractiveCalculator
       include Adapter
 
       def initialize
