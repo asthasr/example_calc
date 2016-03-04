@@ -13,5 +13,18 @@ module Calculator
     rescue
       fail Error::UnknownValue, str
     end
+
+    def present_error(e)
+      case e
+      when Error::DivisionByZero
+        "Cannot divide by zero!"
+      when Error::TooFewOperands
+        "There are too few values for that operation."
+      when Error::UnknownValue
+        "Invalid input: #{e.message}"
+      else
+        raise e
+      end
+    end
   end
 end

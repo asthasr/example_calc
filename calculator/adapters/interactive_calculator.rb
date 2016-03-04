@@ -21,12 +21,8 @@ module Calculator
           else
             begin
               @stack.append(parse_token(input))
-            rescue Error::DivisionByZero
-              puts "Cannot divide by zero!"
-            rescue Error::TooFewOperands => e
-              puts "There are too few values for that operation."
-            rescue Error::UnknownValue => e
-              puts "Invalid input: #{e.message}"
+            rescue StandardError => e
+              puts present_error(e)
             end
           end
 

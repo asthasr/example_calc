@@ -15,9 +15,11 @@ module Calculator
                   when Numeric
                     value
                   else
-                    @stack += @operands
                     fail Error::UnknownValue, value
                   end
+    rescue StandardError => e
+      @stack += @operands
+      raise e
     end
 
     def view
